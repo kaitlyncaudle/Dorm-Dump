@@ -7,7 +7,7 @@ import { useAuth } from '@/lib/auth';
 import { useRequireAccount } from '@/lib/use-require-account';
 import { GoogleButton } from '@/components/google-button';
 
-export const Route = createFileRoute('/item/$id')({
+export const Route = createFileRoute('/src/routes/item/$id')({
   head: ({ params }) => ({ meta: [{ title: `${params.id} · Dorm Dump` }, { name: 'description', content: 'Details, pickup spot, and seller for this campus find on Dorm Dump.' }, { property: 'og:title', content: `${params.id} · Dorm Dump` }, { property: 'og:description', content: 'A pre-loved dorm essential from a fellow Bulldog.' }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] }),
   component: ItemDetail,
 });
